@@ -1,4 +1,4 @@
-import { PostCard } from "../components";
+import { Categories, PostCard, PostWidget } from "../components";
 
 const posts = [
   { title: "Post One", excerpt: "This is post one" },
@@ -16,7 +16,9 @@ const Home: React.FC = ({}) => {
           ))}
         </div>
         <div className='lg:col-span-4 col-span-1'>
-          <div className='lg:sticky relative top-8'>PostWidget Categories</div>
+          <div className='lg:sticky relative top-8'>
+            <PostWidget /> <Categories />
+          </div>
         </div>
       </div>
     </div>
