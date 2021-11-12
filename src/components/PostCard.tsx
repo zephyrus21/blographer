@@ -50,9 +50,16 @@ const PostCard: React.FC<PostCardProps> = ({
           <span>{moment(createdAt).format("DD MMM, YYYY")}</span>
         </div>
       </div>
-      <p className='text-center text-lg text-green-700 font-normal px-4 lg:px-20 mb-8'>
+      <p className='text-center text-lg text-blue-900 font-normal px-4 lg:px-20 mb-8'>
         {excerpt}
       </p>
+      <div className='text-center'>
+        <Link href={`/post/${slug}`}>
+          <span className='transition duration-500 transform hover:-translate-y-1 hover:bg-blue-700 inline-block bg-blue-500 text-lg text-white rounded-full font-medium px-8 py-3 cursor-pointer'>
+            Continue Reading
+          </span>
+        </Link>
+      </div>
     </div>
   );
 };
