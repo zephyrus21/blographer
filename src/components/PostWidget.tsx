@@ -3,12 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getRecentPosts, getSimilarPosts } from "../services";
 import Link from "next/link";
 
-interface PostWidgetProps {
-  slug: string;
-  categories: string[];
-}
-
-const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
+const PostWidget: React.FC = ({ slug, categories }: any) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
@@ -37,7 +32,7 @@ const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
             <p className='text-gray-500 font-xs'>
               {moment(post.createdAt).format("DD MMM, YYYY")}
             </p>
-            <Link href={`/post/${post.slug}`} className='text-md' key={index}>
+            <Link href={`/post/${post.slug}`} key={index}>
               {post.title}
             </Link>
           </div>
