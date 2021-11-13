@@ -14,7 +14,6 @@ interface PostDetailsProps {
 }
 
 const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
-  console.log(post);
   return (
     <>
       <div className='container mx-auto px-10 mb-8'>
@@ -26,6 +25,7 @@ const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
               author={post.author.name}
               createdAt={post.createdAt}
               photo={post.author.photo.url}
+              content={post.content.raw.children}
             />
             <Author
               name={post.author.name}
