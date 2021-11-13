@@ -39,6 +39,8 @@ const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
           <div className='col-span-1 lg:col-span-4'>
             <div className='relative lg:sticky top-8'>
               <PostWidget
+                id={post.id}
+                key={post.id}
                 slug={post.slug}
                 categories={post.categories.map((category) => category.slug)}
               />
