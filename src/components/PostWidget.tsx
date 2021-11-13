@@ -5,9 +5,7 @@ import Link from "next/link";
 
 interface PostWidgetProps {
   slug: any;
-  categories: any;
-  id: any;
-  key: any;
+  categories: any[];
 }
 
 const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
