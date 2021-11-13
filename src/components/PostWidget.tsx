@@ -3,7 +3,12 @@ import React, { useEffect, useState } from "react";
 import { getRecentPosts, getSimilarPosts } from "../services";
 import Link from "next/link";
 
-const PostWidget: React.FC = ({ slug, categories }: any) => {
+interface PostWidgetProps {
+  slug: any;
+  categories: any;
+}
+
+const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
