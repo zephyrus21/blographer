@@ -4,8 +4,8 @@ import { getRecentPosts, getSimilarPosts } from "../services";
 import Link from "next/link";
 
 interface PostWidgetProps {
-  slug: any;
-  categories: {};
+  slug?: any;
+  categories?: any[];
 }
 
 const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
