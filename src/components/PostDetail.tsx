@@ -1,5 +1,6 @@
 import moment from "moment";
 import React from "react";
+import Image from "next/image";
 
 interface PostDetailProps {
   title: string;
@@ -89,7 +90,8 @@ const PostDetail: React.FC<PostDetailProps> = ({
           <div className='px-4 lg:px-0'>
             <div className='flex items-center mb-8 w-full'>
               <div className='hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 '>
-                <img
+                <Image
+                  unoptimized
                   alt={author}
                   height='30px'
                   width='30px'
