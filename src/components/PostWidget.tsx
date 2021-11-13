@@ -5,11 +5,13 @@ import Link from "next/link";
 
 interface PostWidgetProps {
   slug: any;
-  categories: any[];
+  categories: {};
 }
 
 const PostWidget: React.FC<PostWidgetProps> = ({ slug, categories }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
+
+  // console.log(typeof categories);
 
   useEffect(() => {
     if (slug)
