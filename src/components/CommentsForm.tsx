@@ -91,7 +91,7 @@ const CommentsForm: React.FC<CommentsFormProps> = ({ slug }) => {
       </h3>
       <div className='grid grid-cols-1 gap-4 mb-4'>
         <textarea
-          value={formData.comment}
+          value={formData.comment || ""}
           onChange={onInputChange}
           className='p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
           name='comment'
@@ -101,7 +101,7 @@ const CommentsForm: React.FC<CommentsFormProps> = ({ slug }) => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
         <input
           type='text'
-          value={formData.name}
+          value={formData.name || ""}
           onChange={onInputChange}
           className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
           placeholder='Name'
@@ -109,7 +109,7 @@ const CommentsForm: React.FC<CommentsFormProps> = ({ slug }) => {
         />
         <input
           type='email'
-          value={formData.email}
+          value={formData.email || ""}
           onChange={onInputChange}
           className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
           placeholder='Email'
