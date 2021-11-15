@@ -138,7 +138,7 @@ const CommentsForm: React.FC<CommentsFormProps> = ({ slug }) => {
       <div className='mt-8'>
         <button
           type='button'
-          onClick={handleCommenstSubmission}
+          // onClick={handleCommenstSubmission}
           className='transition duration-500 ease hover:bg-indigo-900 inline-block bg-blue-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer'>
           Post Comment
         </button>
